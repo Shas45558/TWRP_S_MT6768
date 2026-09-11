@@ -46,6 +46,16 @@ service keymaster-4-0-beanpod /vendor/bin/hw/android.hardware.keymaster@4.0-serv
     disabled
     seclabel u:r:recovery:s0
 
+# Keymaster 4.1 (vendor S / MIUI 13). El 4.0 de arriba es para vendor R;
+# se arrancan los dos y el que no case con la ROM muere sin molestar.
+service keymaster-4-1-beanpod /vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    interface android.hardware.keymaster@4.1::IKeymasterDevice default
+    user root
+    group root drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
 # Fastbootd
 service fastbootd /system/bin/fastbootd
     class fastbootd
@@ -70,12 +80,14 @@ on property:hwservicemanager.ready=true
     start teei_daemon
     write /proc/bootprof "start teei_daemon end (on fs)"
     start keymaster-4-0-beanpod
+    start keymaster-4-1-beanpod
     start gatekeeper-1-0
     start vendor.health-hal-2-0
 
 on property:ro.crypto.state=unsupported
     stop teei_daemon
     stop keymaster-4-0-beanpod
+    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
@@ -83,6 +95,7 @@ on property:ro.crypto.state=unsupported
 on property:ro.crypto.state=unencrypted
     stop teei_daemon
     stop keymaster-4-0-beanpod
+    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager
@@ -90,6 +103,7 @@ on property:ro.crypto.state=unencrypted
 on property:twrp.decrypt.done=true
     stop teei_daemon
     stop keymaster-4-0-beanpod
+    stop keymaster-4-1-beanpod
     stop gatekeeper-1-0
     stop servicemanager
     stop hwservicemanager

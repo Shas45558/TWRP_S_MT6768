@@ -45,11 +45,25 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_XZ_UTILS=1
 	export FOX_USE_LZ4_BINARY=1
 	export FOX_USE_ZSTD_BINARY=1
-	export FOX_USE_SPECIFIC_MAGISK_ZIP=~/Magisk/Magisk-v27.0.zip
-	export FOX_VANILLA_BUILD=1
-	export FOX_DELETE_INITD_ADDON=1
+	# No vanilla build and no addon removal: we want all of them.
+	# These must be set to 0 explicitly. Simply dropping the lines is not
+	# enough, because a variable already exported in the build shell survives
+	# a re-source of envsetup.sh.
+	# (FOX_USE_SPECIFIC_MAGISK_ZIP pointed at a zip that does not exist here;
+	#  clearing it falls back to the Magisk.zip shipped in the tree.)
+	export FOX_VANILLA_BUILD=0
+	export FOX_DELETE_INITD_ADDON=0
+	export FOX_USE_SPECIFIC_MAGISK_ZIP=
 	export FOX_USE_BUSYBOX_BINARY=1
-        export OF_MAINTAINER="Komaru-dude"
+        export OF_MAINTAINER="angelpro09"
+	# BLKROSET fails on the raw eMMC (/dev/block/mmcblk0). It is harmless,
+	# so log it as info instead of as an error
+	export OF_LOOP_DEVICE_ERRORS_TO_LOG=1
+
+	# FRP erase addon
+	export OF_ENABLE_FRP_ADDON=1
+	# lptools: logical partition (super) management, useful on this device
+	export OF_ENABLE_LPTOOLS=1
 
 	# make all builds dynamic
 	export FOX_USE_DYNAMIC_PARTITIONS=1
