@@ -1,0 +1,11 @@
+ro.mediatek.platform=MT6768
+ro.hardware=mt6768
+ro.hardware.kmsetkey=beanpod
+ro.hardware.gatekeeper=beanpod
+ro.mtk_tee_gp_support=1
+ro.mtk_microtrust_tee_support=1
+ro.product.device=merlin
+fbe.metadata.wrappedkey=true
+ro.secure=0
+ro.debuggable=1
+#
