@@ -28,5 +28,5 @@
 /protect_s        ext4     /dev/block/by-name/protect2     flags=backup=1;display="Protect S"
 
 /external_sd      vfat     /dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="external_sd";storage;wipeingui;removable;fsflags="utf8"
-/usb_otg       	  auto     /dev/block/sdd1  /dev/block/sdd            flags=display="USB Storage";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg       	  auto     /dev/block/sda1  /dev/block/sda            flags=display="USB Storage";storage;wipeingui;removable;fsflags="utf8"
 #
