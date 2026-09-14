@@ -21,7 +21,7 @@
 #
 #
 
-source /system/bin/merlinx_funcs.sh
+source /system/bin/lancelot_funcs.sh
 
 # check for overwrite and restore
 check_replace() {

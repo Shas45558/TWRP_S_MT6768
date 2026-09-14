@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/merlinx
+DEVICE_PATH := device/xiaomi/lancelot
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -36,7 +36,7 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := merlinx
+TARGET_BOOTLOADER_BOARD_NAME := lancelot
 TARGET_NO_BOOTLOADER := true
 
 # File systems

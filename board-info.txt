@@ -1,1 +1,1 @@
-require board=merlin|merlinx
+require board=lancelot

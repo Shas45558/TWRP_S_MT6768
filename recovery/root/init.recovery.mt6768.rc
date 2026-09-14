@@ -1,4 +1,4 @@
-import /microtrust_merlinx.rc
+import /microtrust_lancelot.rc
 
 on early-init
     start adbd

@@ -19,7 +19,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-source /system/bin/merlinx_funcs.sh;
+source /system/bin/lancelot_funcs.sh;
 
 CP_CMD="/system/bin/cp";
 

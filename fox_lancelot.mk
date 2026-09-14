@@ -36,7 +36,7 @@ OF_PATCH_AVB20 := 1
 
 OF_QUICK_BACKUP_LIST := /boot;/data;
 
-# necessary to decrypt most merlinx ROMs (trigger "TW_PREPARE_DATA_MEDIA_EARLY")
+# necessary to decrypt most lancelot ROMs (trigger "TW_PREPARE_DATA_MEDIA_EARLY")
 OF_FIX_DECRYPTION_ON_DATA_MEDIA := 1
 
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format

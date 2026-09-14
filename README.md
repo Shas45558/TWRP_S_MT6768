@@ -1,6 +1,6 @@
-# Device Tree for Redmi Note 9 (merlinx)
+# Device Tree for Redmi Note 9 (lancelot)
 
-The Redmi Note 9 (codenamed _"merlinx"_) is a mid-range smartphone from Xiaomi.  
+The Redmi Note 9 (codenamed _"lancelot"_) is a mid-range smartphone from Xiaomi.  
 It was released in May 2020.
 
 ## Device specifications
@@ -25,7 +25,7 @@ It was released in May 2020.
 The recovery may take a long time to start.
 
 ## Device picture
-![merlinx](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-9-4.jpg)
+![lancelot](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-9-4.jpg)
 
 ---
 ## Credits

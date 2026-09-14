@@ -17,7 +17,7 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="merlinx"
+FDEVICE="lancelot"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep \"$FDEVICE\")
@@ -36,8 +36,8 @@ fi
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export ALLOW_MISSING_DEPENDENCIES=true
         export FOX_ENABLE_APP_MANAGER=1
-	export TARGET_DEVICE_ALT="merlinx"
-	export FOX_TARGET_DEVICES="merlinx,merlinnfc,merlin"
+	export TARGET_DEVICE_ALT="lancelot"
+	export FOX_TARGET_DEVICES="lancelot,galahad,shiva"
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
 	export FOX_BASH_TO_SYSTEM_BIN=1

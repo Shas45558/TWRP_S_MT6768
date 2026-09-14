@@ -10,7 +10,7 @@
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-LOCAL_PATH := device/xiaomi/merlinx
+LOCAL_PATH := device/xiaomi/lancelot
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29

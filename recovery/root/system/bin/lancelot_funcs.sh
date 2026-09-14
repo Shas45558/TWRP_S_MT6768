@@ -53,7 +53,7 @@ is_dynamic_fox() {
 # report whether the ROM has dynamic partitions
 rom_has_dynamic_partitions() {
 # the device that we are building for
-local BUILD_DEVICE=merlinx;
+local BUILD_DEVICE=lancelot;
   local markers="xiaomi_dynamic_partitions qti_dynamic_partitions "$BUILD_DEVICE"_dynamic_partitions "$BUILD_DEVICE"_dynpart xiaomi_dynpart qti_dynpart";
   local F=/tmp/blck_tmp;
   dd if=/dev/block/by-name/system bs=256k count=1 of=$F;

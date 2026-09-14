@@ -50,12 +50,12 @@ process_device() {
 	local dev=$(getprop "ro.boot.hwc");
 	case "$dev" in
 	GL)
-		setdevicename "merlinx";
-		setdevicemodel "Redmi Note 9";
+		setdevicename "lancelot";
+		setdevicemodel "Redmi 9";
 	;;
 	*)
-		setdevicename "merlinx";
-		setdevicemodel "Redmi Note 9";
+		setdevicename "lancelot";
+		setdevicemodel "Redmi 9";
 	;;
 	esac
 }
